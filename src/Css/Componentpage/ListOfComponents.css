@@ -1,3 +1,10 @@
-.body3{
-    background-color: blue;
+.body3 {
+  background-color: blue;
+}
+
+#ListOfComponents {
+  float: left;
+  border: 1px solid black;
+  min-width: 500px;
+  min-height: 700px;
 }

@@ -5,8 +5,8 @@ import '../../Css/Componentpage/GraphoftheWeek.css' ;
 
 function GraphoftheWeek() {
   return (
-    <div className= 'body1'>
-        <h1>GraphoftheWeek</h1>
+    <div id="GraphoftheWeek">
+      <p> Graph of all the actions of one week</p>
     </div>
   );
 }

@@ -3,7 +3,8 @@ import '../../Css/Componentpage/ListOfComponents.css' ;
 
 function ListOfComponents() {
   return (
-    <div className="body3">
+    <div id="ListOfComponents">
+            <p> list of components</p>
     </div>
   );
 }

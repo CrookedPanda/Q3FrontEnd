@@ -1,3 +1,11 @@
-.body4{
-    background-color: yellow;
+.body4 {
+  background-color: yellow;
+}
+
+#TotalActions {
+  float: right;
+  border: 1px solid black;
+  max-width: 500px;
+  min-width: 500px;
+  max-height: 100px;
 }
