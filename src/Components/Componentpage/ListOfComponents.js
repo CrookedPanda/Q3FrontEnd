@@ -1,9 +1,9 @@
 import React from "react";
+import '../../Css/Componentpage/ListOfComponents.css' ; 
 
 function ListOfComponents() {
   return (
-    <div className="ListOfComponents">
-        <h1>ListOfComponents</h1>
+    <div className="body3">
     </div>
   );
 }

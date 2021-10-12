@@ -3,10 +3,14 @@ import GraphoftheWeek from "./GraphoftheWeek";
 import HistoryoftheComponents from "./HistoryoftheComponents";
 import ListOfComponents from "./ListOfComponents";
 import TotalActions from "./TotalActions";
+import '../../Css/Componentpage/Componentpage.css' ; 
 
 function ComponentPage() {
   return (
-    <><ListOfComponents /><TotalActions /> <GraphoftheWeek /><HistoryoftheComponents /></>
+    <div className='row, body'>
+      <><ListOfComponents/></>
+      <><TotalActions /> <GraphoftheWeek /><HistoryoftheComponents /></>
+    </div>
   );
 }
 
