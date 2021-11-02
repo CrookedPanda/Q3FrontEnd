@@ -15,7 +15,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Machinemonitoring() {
   return (
-    <Box
+    <div style={{backgroundColor:'#2B2B34'}}>
+      <Box
       sx={{
         gridAutoRows: '210px',
         display: 'grid',
@@ -28,7 +29,8 @@ function Machinemonitoring() {
       <Item sx={{ gridColumn: '2', gridRow: 'span 2' }}><Graph/></Item>
       <Item sx={{ gridColumn: '1', gridRow: 'span 2' }}><Graph/></Item>
       <Item sx={{ gridColumn: '2', gridRow: 'span 2' }}><Graph/></Item>
-    </Box>
+      </Box>
+    </div>
   );
 }
 

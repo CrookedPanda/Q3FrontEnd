@@ -1,8 +1,17 @@
 
-.container{
-    width: 100%;
-    padding-right: 0%;
-    padding-left: 0%;
-    margin-right: 0%;
-    margin-left: 0%;
+.navbar,
+.navbar-default {
+    background-color: #24242C;
+    color:#D3E2EA;
 }
+
+.navbar-brand{
+    font-family: 'Segoe UI';
+    color: #D3E2EA !important;
+}
+
+.nav-link{
+    font-family: 'Segoe UI';
+    color: #D3E2EA !important;
+    
+  }
