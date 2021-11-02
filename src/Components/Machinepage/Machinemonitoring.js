@@ -1,9 +1,6 @@
 import React from "react";
-import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
-import Graph from './Machinegraph';
-
+import Slider from "react-slick";
+/*
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
@@ -11,26 +8,42 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   border: '3px solid'
 }));
+*/
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
+
 
 
 function Machinemonitoring() {
   return (
-    <div style={{backgroundColor:'#2B2B34'}}>
-      <Box
-      sx={{
-        gridAutoRows: '210px',
-        display: 'grid',
-        columnGap: 3,
-        rowGap: 1,
-        gridTemplateColumns: 'repeat(2, 1fr)',
-      }}
-    >
-      <Item sx={{ gridColumn: '1', gridRow: 'span 2' }}><Graph/></Item>
-      <Item sx={{ gridColumn: '2', gridRow: 'span 2' }}><Graph/></Item>
-      <Item sx={{ gridColumn: '1', gridRow: 'span 2' }}><Graph/></Item>
-      <Item sx={{ gridColumn: '2', gridRow: 'span 2' }}><Graph/></Item>
-      </Box>
-    </div>
+<div>
+        <h2> Single Item</h2>
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
+      </div>
   );
 }
 
