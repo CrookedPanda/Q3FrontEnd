@@ -1,5 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Box from '@mui/material/Box';
+//import { border } from "@mui/system";
+
 /*
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -10,40 +15,75 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 */
 const settings = {
-  dots: true,
   infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToShow: 4,
+  speed: 100,
+  rows: 4,
+  slidesToshow: 1,
 };
 
 
 
 function Machinemonitoring() {
   return (
-<div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+    <div style={{color: '#D3E2EA',height: '997px',}}>
+      <Box  sx={{
+        width: 'auto',
+        backgroundColor: '#2B2B34',
+        marginLeft: '20%',
+      }}>
+          <Slider {...settings}>
+          <div style={{fontSize: '20px'}}>
+            <h3>Sawblade</h3>
           </div>
           <div>
-            <h3>2</h3>
+            <h3>Sawblade</h3>
           </div>
           <div>
-            <h3>3</h3>
+            <h3>Sawblade</h3>
           </div>
           <div>
-            <h3>4</h3>
+            <h3>Sawblade</h3>
           </div>
           <div>
-            <h3>5</h3>
+            <h3>Sawblade</h3>
           </div>
           <div>
-            <h3>6</h3>
+            <h3>Sawblade</h3>
           </div>
-        </Slider>
-      </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          <div>
+            <h3>Sawblade</h3>
+          </div>
+          </Slider>
+        </Box>
+    </div>
   );
 }
 
