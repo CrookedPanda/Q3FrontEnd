@@ -6,25 +6,30 @@ import navbar from '../Css/Navbar.css'
 
 function Navbars() {
     return(
-      <Navbar style={navbar}>
-        <LinkContainer to="/">
-        <Navbar.Brand>Q3</Navbar.Brand>
-        </LinkContainer>
-        <Nav>
-            <LinkContainer className="mr-auto" to="/Machinemonitoring">
-            <Nav.Link>Machinemonitoring</Nav.Link>
-            </LinkContainer>
-            <LinkContainer className="mr-auto" to="/Components">
-            <Nav.Link>Components</Nav.Link>
-            </LinkContainer>
-            <LinkContainer className="mr-auto" to="/Lifexpectancy">
-            <Nav.Link>Lifexpectancy</Nav.Link>
-            </LinkContainer>
+      <div>
+        <Navbar style={navbar}>
+          <LinkContainer to="/">
+          <Navbar.Brand>Q3</Navbar.Brand>
+          </LinkContainer>
+          <Nav className="justify-content-center" style={{ flex: 1}}>
+              <LinkContainer to="/Machinemonitoring">
+              <Nav.Link>Machinemonitoring</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/Components">
+              <Nav.Link>Components</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/Lifexpectancy">
+              <Nav.Link>Lifexpectancy</Nav.Link>
+              </LinkContainer>
+            </Nav>
+            <Nav className="ms-auto">
             <LinkContainer className="ms-auto" to="/Account">
-            <Nav.Link>Account</Nav.Link>
-            </LinkContainer>
-          </Nav>
-      </Navbar>
+              <Nav.Link>Account</Nav.Link>
+              </LinkContainer>
+            </Nav>
+        </Navbar>
+        */
+      </div>
     );
 
 }

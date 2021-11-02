@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import MachinePage from './Components/Machinepage/Machinemonitoring'
 import ComponentPage from './Components/Componentpage/Componentpage'
 import Lifepage from './Components/Lifepage/Lifepage'
 import AccountPage from './Components/Accountpage/Accountpage'
+
 import reportWebVitals from './reportWebVitals';
 import Navbar from './Components/Navbar'
+//import Navbartest from './Components/Navbartest'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-        <Router>
+            <Router>
+      <div style={{backgroundColor: '#2B2B34'}}>
       <Navbar />
       <Switch>
         <Route exact path="/Machinemonitoring" component={MachinePage} />
@@ -19,6 +23,7 @@ ReactDOM.render(
         <Route path="/Lifexpectancy" component={Lifepage} />
         <Route path="/Account" component={AccountPage} />
       </Switch>
+      </div>
       </Router>
   </React.StrictMode>,
   document.getElementById('root')
