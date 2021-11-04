@@ -131,14 +131,13 @@ const data = [
 function Machinegraph() {
   return (
     <BarChart
-    width={270}
+    width={300}
     height={160}
     data={data}
     barCategoryGap="-1%"
     barSize = "30px"
     margin={{
-      top: 20,
-      left:-35,
+      top: 10,
       bottom: 5
     }}
   >

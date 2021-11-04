@@ -26,7 +26,7 @@ function Machinemonitoring() {
         marginRight: '10%',
       }}>
           <Slider {...settings}>
-          <div style= {{width: "100px", border: '3px solid red'}}>
+          <div style= {{width: "120px", border: '3px solid red'}}>
             <h6 style={{textAlign: 'center'}}>Sawblade1</h6>
             <Graph/>
           </div>
