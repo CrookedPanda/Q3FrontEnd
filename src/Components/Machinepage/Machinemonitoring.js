@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Box from '@mui/material/Box';
 import Graph from './Machinegraph';
+//import { useLocation ,useHistory } from "react-router-dom";
+//import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import { CardHeader,Card,CardContent} from '@mui/material';
-
 
 const settings = {
   infinite: true,
