@@ -15,8 +15,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-            <Router>
-      <div style={{backgroundColor: '#2B2B34', height: '100%'}}>
+      <Router>
+      <div style={{backgroundColor: '#2B2B34', height: '100vh'}}>
       <Navbar />
       <Switch>
         <Route exact path="/Machinemonitoring" component={MachinePage} />
