@@ -1,32 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-import MachinePage from './Components/Machinepage/Machinemonitoring'
-import ComponentPage from './Components/Componentpage/Componentpage'
-import Lifepage from './Components/Lifepage/Lifepage'
-import AccountPage from './Components/Accountpage/Accountpage'
-import Machinecomp from './Components/Machinelistpage/Machinecomp'
-
 import reportWebVitals from './reportWebVitals';
-import Navbar from './Components/Navbar'
-//import Navbartest from './Components/Navbartest'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import store from './Redux/Store'
+import App from './App'
+import {Provider} from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
-      <Router>
-      <div style={{backgroundColor: '#2B2B34', height: '100vh'}}>
-      <Navbar />
-      <Switch>
-        <Route exact path="/Machinemonitoring" component={MachinePage} />
-        <Route path="/Components" component={ComponentPage} />
-        <Route path="/Lifexpectancy" component={Lifepage} />
-        <Route path="/Account" component={AccountPage} />
-        <Route path="/Machinecomp" component={Machinecomp} />
-      </Switch>
-      </div>
-      </Router>
+    <Provider store={store}>
+      <App/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

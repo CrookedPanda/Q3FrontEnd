@@ -27,8 +27,8 @@ function Machinegraph(machine) {
     <YAxis />
     <Tooltip />
     <Legend />
-    <Bar dataKey="Uptime" stackId="a" fill="#369E32" />
-    <Bar dataKey="Downtime" stackId="a" fill="#D23333" />
+    <Bar dataKey="uptime" stackId="a" fill="#369E32" />
+    <Bar dataKey="downtime" stackId="a" fill="#D23333" />
   </BarChart>
   );
 }
