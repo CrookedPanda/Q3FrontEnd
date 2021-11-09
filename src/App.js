@@ -17,8 +17,8 @@ function App() {
       <Route exact path="/Machinemonitoring" component={Machinemonitoring} />
       <Route path="/Components" component={ComponentPage} />
       <Route path="/Lifexpectancy" component={Lifepage} />
-      <Route path="/Account" component={AccountPage} />
-      <Route path="/Machinecomp" component={Machinecomp} />
+      <Route path="/Account:name" component={AccountPage} />
+      <Route path="/Machinecomp/:name" component={Machinecomp} />
     </Switch>
     </div>
     </Router>

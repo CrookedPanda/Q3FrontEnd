@@ -24,7 +24,7 @@ function Machinegraph(machine) {
   >
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="startTime" />
-    <YAxis />
+    <YAxis type="number" domain={[0, 30]} />
     <Tooltip />
     <Legend />
     <Bar dataKey="uptime" stackId="a" fill="#369E32" />

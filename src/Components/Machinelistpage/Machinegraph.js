@@ -9,7 +9,6 @@ import {
     Legend, 
 } from 'recharts';
 
-
 const data = [
     {
         startTime: "0:30",
@@ -254,28 +253,30 @@ Downtime: 0
   ];
 
 
-function Machinegraph() {
+function Machinegraph(machine) {
     return(
     <div>
-    <h5>E5</h5>
+    <h5>E3</h5>
     <BarChart
     width={1200}
     height={750}
     data={data}
-    barCategoryGap="-1%"
+    barCategoryGap="0%"
     barSize = "30px"
     margin={{
       top: 10,
-      bottom: 5
+      bottom: 5,
+      left: -15,
+      right: 15
     }}
   >
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="startTime" />
-    <YAxis />
+    <YAxis type="number" domain={[0, 30]}  />
     <Tooltip />
     <Legend />
-    <Bar dataKey="Uptime" stackId="a" fill="#369E32" />
-    <Bar dataKey="Downtime" stackId="a" fill="#D23333" />
+    <Bar dataKey="uptime" stackId="a" fill="#369E32" />
+    <Bar dataKey="downtime" stackId="a" fill="#D23333" />
   </BarChart>
         </div>
     )
