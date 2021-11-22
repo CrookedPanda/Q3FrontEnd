@@ -11,14 +11,6 @@ import { styled } from '@mui/material/styles';
 function createData(name, calories) {
     return { name, calories};
   }
-  
-  const rows = [
-    createData(245, 262),
-    createData(292, 159),
-    createData(262, 162),
-    createData(305, 645),
-    createData(305, 305),
-  ];
 
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -27,25 +19,22 @@ function createData(name, calories) {
     fontcolor: "#D3E2EA"
   }));
 
-function Machinelist() {
+function Machinelist(machine) {
+  const {data} = machine;
     return (
         <TableContainer Component={Item}>
         <Table sx={{ maxWidth: 600 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Id</TableCell>
-              <TableCell>Component Name</TableCell>
+              <TableCell style={{color: '#D3E2EA'}}>Component Name</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {data.components.map((component) => (
               <TableRow
-                key={row.name}
+                key={component}
               >
-                <TableCell style={{fontcolor: '#D3E2EA'}} component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="middle">{row.calories}</TableCell>
+                <TableCell style={{color: '#D3E2EA', }} align="middle">{component}</TableCell>
               </TableRow>
             ))}
           </TableBody>

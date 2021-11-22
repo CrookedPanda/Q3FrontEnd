@@ -32,8 +32,11 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 
 const Machinecomp =() => {
-  const machine = useSelector((state) => state.machine)
-  const { machinename } = useParams()
+  const { name } = useParams()
+  const machine = useSelector((state) => state.allMachines.machines.find(machine => machine.name === name))
+  console.log(name)
+  console.log(machine)
+  /*
   const dispatch = useDispatch
   console.log(machine)
 
@@ -44,18 +47,15 @@ const Machinecomp =() => {
     });
     dispatch(selectedMachine(response.data));
   }
-
-  useEffect(() =>{
-    if(machinename && machinename !== "") getMachine();
-  },[machinename]);
+  */
     return(
         <div style={{ color: '#D3E2EA',height: '75%',}}>
             <Grid container spacing={30}>
             <Grid item xs={9}>
-                <Item><Graph data ={machine.uptime}/></Item>
+                <Item><Graph data ={machine}/></Item>
             </Grid>
              <Grid item xs={3}>
-                <Item2><List></List></Item2>
+                <Item2><List data ={machine}/></Item2>
             </Grid>
             </Grid>
         </div>
