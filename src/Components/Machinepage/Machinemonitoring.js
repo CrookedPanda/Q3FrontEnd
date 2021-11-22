@@ -49,7 +49,7 @@ const settings = {
     <div style={{color: '#D3E2EA',height: '800px',}}>
       <Box  sx={{
         height: '800px',
-        width: 'auto',
+          
         backgroundColor: '#2B2B34',
         marginLeft: '10%',
         marginRight: '10%',
