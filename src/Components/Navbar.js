@@ -12,11 +12,11 @@ function Navbars() {
           <Navbar.Brand>Q3</Navbar.Brand>
           </LinkContainer>
           <Nav className="justify-content-center" style={{ flex: 1}}>
-              <LinkContainer to="/Machinemonitoring">
-              <Nav.Link>Machinemonitoring</Nav.Link>
-              </LinkContainer>
               <LinkContainer to="/Components">
               <Nav.Link>Components</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/Machinemonitoring">
+              <Nav.Link>Machinemonitoring</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/Lifexpectancy">
               <Nav.Link>Lifexpectancy</Nav.Link>
