@@ -15,8 +15,8 @@ import { styled } from '@mui/material/styles';
     fontcolor: "#D3E2EA"
   }));
 
-function Machinelist(machine) {
-  const {data} = machine;
+function ListComponents(component) {
+  const {data} = component;
     return (
         <TableContainer Component={Item}>
         <Table sx={{ maxWidth: 600 }} aria-label="simple table">
@@ -31,7 +31,7 @@ function Machinelist(machine) {
                 key={component}
               >
                 <TableCell style={{color: '#D3E2EA', }} align="middle">{component}</TableCell>
-              </TableRow>
+              </TableRow>   
             ))}
           </TableBody>
         </Table>
@@ -39,4 +39,4 @@ function Machinelist(machine) {
     )
 
 }
-export default Machinelist
+export default ListComponents
