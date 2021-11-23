@@ -29,7 +29,7 @@ function ListComponents(component) {
             {data.components.map((component) => (
               <TableRow
                 key={component}
-              >
+              > 
                 <TableCell style={{color: '#D3E2EA', }} align="middle">{component}</TableCell>
               </TableRow>   
             ))}
