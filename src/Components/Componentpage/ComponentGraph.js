@@ -25,7 +25,6 @@ function Componentgraph(component) {
       bottom: 5
     }}
   >
-    <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="week" />
     <YAxis type="number" domain={[0, 500]} />
     <Tooltip />
