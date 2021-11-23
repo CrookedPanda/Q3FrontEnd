@@ -36,32 +36,6 @@ const useStyles = makeStyles({
     height: "50%",
   },
 });
-Componenten{
-  {
-  name:Randomnaam
-  TotalActions:20000
-    Actions{
-      {
-      week:Week1
-      Actions:50
-      }
-      {
-      week:Week2
-      Actions:100
-      }
-    }
-    HistoryActions
-    {
-      Type:maintance
-      Date:29-02-2020 09:31
-    }
-    PlannedActions
-    {
-      Type:maintance
-      Date:29-02-20211 10:31
-    }
-  }
-  }
 
 function ComponentPage() {
   const classes = useStyles();
