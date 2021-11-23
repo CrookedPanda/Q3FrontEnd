@@ -4,9 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import '../../Css/Componentpage/Componentpage.css' ; 
 import { makeStyles } from "@material-ui/styles";
 import Componentgraph from "./ComponentGraph";
-import ComponentList from "./ListComponents"
 import {useDispatch ,useSelector } from "react-redux";
-import {setcomponents, selectedComponent} from "../../Redux/Actions/ComponentActions";
+import {setComponents, selectedComponent} from "../../Redux/Actions/ComponentActions";
 const useStyles = makeStyles({
   box: {
     height: "100%",
@@ -39,8 +38,16 @@ const useStyles = makeStyles({
   },
 });
 
+
+
 function ComponentPage() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const gotcomponents = useSelector((state) => state.allcomponents.components);
+  console.log(components)
+  dispatch(setComponents(components));
+  const component = useSelector((state) => state.allcomponents.components.find(component => component.Name == "real"))
+  console.log(component)
 
   return (
     <div style={{ width: '90%', margin: "auto" }}>
@@ -53,7 +60,7 @@ function ComponentPage() {
         >
           <Grid xs={12} className={classes.item2} item2>
             <Box className={classes.box} bgcolor="#24242C" >
-              <Componentgraph/>
+              <Componentgraph data ={component}/>
             </Box>
           </Grid>
           <Grid xs={6} className={classes.item} item>
@@ -87,7 +94,7 @@ function ComponentPage() {
 
 const components = [
   {
-    Name:"Test",
+    Name:"real",
     TotalActions:5000,
     Actions:[
       {

@@ -6,7 +6,7 @@ const initialState = {
 
 export const componentReducer =  (state= initialState, {type,payload}) =>{
     switch(type) {
-        case ActionTypes.GET_COMPONENT:
+        case ActionTypes.GET_COMPONENTS:
             return {...state,components: payload}
         default:
             return state;
