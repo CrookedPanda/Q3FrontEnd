@@ -1,24 +1,24 @@
-.body {
-  background-color: #2b2b34;
+.body{
+    background-color: white;
 }
 
-.body1 {
-  background-color: gray;
+.body1{
+    background-color: gray;
 }
 
-.body2 {
-  background-color: red;
+.body2{
+    background-color: red;
 }
 
-.body3 {
-  background-color: blue;
+.body3{
+    background-color: blue;
 }
 
-.body4 {
-  background-color: yellow;
+.body4{
+    background-color: yellow;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
+.row{
+    display:flex; flex-direction:row;
 }
+
