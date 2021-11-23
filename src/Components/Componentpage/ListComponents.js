@@ -15,8 +15,8 @@ import { styled } from '@mui/material/styles';
     fontcolor: "#D3E2EA"
   }));
 
-function ListComponents(component) {
-  const {data} = component;
+function ListComponents(components) {
+  const {data} = components;
     return (
         <TableContainer Component={Item}>
         <Table sx={{ maxWidth: 600 }} aria-label="simple table">
@@ -26,11 +26,11 @@ function ListComponents(component) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.components.map((component) => (
+            {data.map((component) => (
               <TableRow
-                key={component}
+                key={component.Name}
               > 
-                <TableCell style={{color: '#D3E2EA', }} align="middle">{component}</TableCell>
+                <TableCell style={{color: '#D3E2EA', }} align="middle">{component.Name}</TableCell>
               </TableRow>   
             ))}
           </TableBody>
