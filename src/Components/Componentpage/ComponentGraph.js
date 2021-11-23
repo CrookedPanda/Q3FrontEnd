@@ -10,8 +10,8 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-function Componentgraph(machine) {
-  const {data} = machine;
+function Componentgraph(component) {
+  const {data} = component;
   return (
     <ResponsiveContainer width= "95%" height= "100%">
     <BarChart
