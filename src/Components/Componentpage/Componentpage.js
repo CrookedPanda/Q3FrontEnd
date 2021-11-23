@@ -5,6 +5,8 @@ import '../../Css/Componentpage/Componentpage.css' ;
 import { makeStyles } from "@material-ui/styles";
 import Componentgraph from "./ComponentGraph";
 import ComponentList from "./ListComponents"
+import {useDispatch ,useSelector } from "react-redux";
+import {setcomponents, selectedComponent} from "../../Redux/Actions/ComponentActions";
 const useStyles = makeStyles({
   box: {
     height: "100%",
@@ -39,6 +41,7 @@ const useStyles = makeStyles({
 
 function ComponentPage() {
   const classes = useStyles();
+
   return (
     <div style={{ width: '90%', margin: "auto" }}>
     <Grid spacing={4} className={classes.container} container>
