@@ -69,12 +69,12 @@ function ComponentPage() {
           </Grid>
           <Grid xs={6} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C"  >
-              <HistoryoftheComponents data ={components}/>
+              <HistoryoftheComponents data ={component.HistoryActions}/>
               </Box>
             </Grid>
             <Grid xs={6} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C"  >
-              <FutureoftheComponents data ={components}/>
+              <FutureoftheComponents data ={component.PlannedActions}/>
               </Box>
             </Grid>
         </Grid>
