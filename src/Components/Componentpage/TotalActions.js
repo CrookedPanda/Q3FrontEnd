@@ -1,10 +1,10 @@
 import React from "react";
-import '../../Css/Componentpage/TotalActions.css' ; 
 
 function TotalActions() {
   return (
     <div className="body4">
-      <h1>Totale actions: 8000</h1>
+      <h6 style={{color: '#D3E2EA', textAlign: 'center'}}>Total</h6>
+      <h2 style={{color: '#D3E2EA', textAlign: 'center', marginTop: '8%'}}>150.000 Actions </h2>
     </div>
   );
 }

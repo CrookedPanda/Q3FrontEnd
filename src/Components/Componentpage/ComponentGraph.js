@@ -17,7 +17,7 @@ function Componentgraph(component) {
     <BarChart
     width={1000}
     height={400}
-    data = {data.Actions}
+    data= {data.Actions}
     barCategoryGap="5%"
     barSize = "30px"
     margin={{
