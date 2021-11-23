@@ -1,7 +1,7 @@
 import { ActionTypes } from "../Contants/action-types";
 
 
-export const setcomponents = (components) => {
+export const setComponents = (components) => {
     return {
         type: ActionTypes.GET_COMPONENTS,
         payload: components,
