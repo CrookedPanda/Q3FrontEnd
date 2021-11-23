@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Grid from "@material-ui/core/Grid";
 import '../../Css/Componentpage/Componentpage.css' ; 
 import { makeStyles } from "@material-ui/styles";
-
+import Componentgraph from "./ComponentGraph";
+import ComponentList from "./ListComponents"
 const useStyles = makeStyles({
   box: {
     height: "100%",
@@ -35,6 +36,32 @@ const useStyles = makeStyles({
     height: "50%",
   },
 });
+Componenten{
+  {
+  name:Randomnaam
+  TotalActions:20000
+    Actions{
+      {
+      week:Week1
+      Actions:50
+      }
+      {
+      week:Week2
+      Actions:100
+      }
+    }
+    HistoryActions
+    {
+      Type:maintance
+      Date:29-02-2020 09:31
+    }
+    PlannedActions
+    {
+      Type:maintance
+      Date:29-02-20211 10:31
+    }
+  }
+  }
 
 function ComponentPage() {
   const classes = useStyles();
@@ -48,13 +75,15 @@ function ComponentPage() {
           container
         >
           <Grid xs={12} className={classes.item2} item2>
-            <Box className={classes.box} bgcolor="yellow" />
+            <Box className={classes.box} bgcolor="#24242C" >
+              <Componentgraph/>
+            </Box>
           </Grid>
           <Grid xs={6} className={classes.item} item>
-            <Box className={classes.box} bgcolor="blue" />
+            <Box className={classes.box} bgcolor="#24242C"  />
             </Grid>
             <Grid xs={6} className={classes.item} item>
-            <Box className={classes.box} bgcolor="blue" />
+            <Box className={classes.box} bgcolor="#24242C"  />
             </Grid>
         </Grid>
       </Grid>
@@ -66,10 +95,11 @@ function ComponentPage() {
           container
         >
           <Grid style={{height:"200px"}} className={classes.item2} item>
-            <Box className={classes.totalactionsbox} bgcolor="blue" />
+            <Box className={classes.totalactionsbox} bgcolor="#24242C"  />
           </Grid>
           <Grid style={{height:"600px"}} className={classes.item} item>
-            <Box className={classes.box} bgcolor="red" />
+            <Box className={classes.box} bgcolor="#24242C" >
+            </Box>
           </Grid>
         </Grid>
       </Grid>
