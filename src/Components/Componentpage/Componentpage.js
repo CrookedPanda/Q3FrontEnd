@@ -29,7 +29,10 @@ const useStyles = makeStyles({
   },
   item: {
     height: "50%",
-    flex: 1
+    flex: 1 
+  },
+  item2: {
+    height: "50%",
   },
 });
 
@@ -41,24 +44,18 @@ function ComponentPage() {
       <Grid xs={9} item>
         <Grid
           spacing={4}
-          direction="column"
           className={classes.container}
           container
         >
-          <Grid className={classes.item} item>
+          <Grid xs={12} className={classes.item2} item2>
             <Box className={classes.box} bgcolor="yellow" />
           </Grid>
-          <Grid
-          spacing={4}
-           className={classes.innerContainer} innerContainer
-           >
-            <Grid xs={6} item>
+          <Grid xs={6} className={classes.item} item>
             <Box className={classes.box} bgcolor="blue" />
             </Grid>
-            <Grid xs={6} item>
-            <Box className={classes.box2} bgcolor="blue" />
+            <Grid xs={6} className={classes.item} item>
+            <Box className={classes.box} bgcolor="blue" />
             </Grid>
-          </Grid>
         </Grid>
       </Grid>
       <Grid xs={3} item>
