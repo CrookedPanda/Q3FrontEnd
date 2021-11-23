@@ -39,4 +39,4 @@ function ListComponents(component) {
     )
 
 }
-export default ListComponent
+export default ListComponents
