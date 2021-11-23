@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< Updated upstream
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Box from '@mui/material/Box';
@@ -20,6 +21,13 @@ function HistoryoftheComponents() {
             <h6 style={{textAlign: 'center'}}>HistoryoftheComponents</h6>
           </div>
         </Box>
+=======
+
+function HistoryoftheComponents() {
+  return (
+    <div>
+        <h1>HistoryoftheComponents</h1>
+>>>>>>> Stashed changes
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< Updated upstream
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Box from '@mui/material/Box';
@@ -24,6 +25,16 @@ return (
       </Box>
   </div>
 );
+=======
+
+function TotalActions() {
+  return (
+    <div style={{color: '#D3E2EA', textAlign: 'Center', }}>
+      <h6>Total</h6>
+      <h1 style={{marginTop: '7%'}}>150.000 Actions</h1>
+    </div>
+  );
+>>>>>>> Stashed changes
 }
 
 export default TotalActions;

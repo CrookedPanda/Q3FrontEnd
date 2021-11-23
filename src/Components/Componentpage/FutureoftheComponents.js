@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< Updated upstream
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Box from '@mui/material/Box';
@@ -20,6 +21,13 @@ function FutureoftheComponents() {
             <h6 style={{textAlign: 'center'}}>FutureoftheComponents</h6>
           </div>
         </Box>
+=======
+
+function FutureoftheComponents() {
+  return (
+    <div>
+        <h1>FutureoftheComponents</h1>
+>>>>>>> Stashed changes
     </div>
   );
 }
