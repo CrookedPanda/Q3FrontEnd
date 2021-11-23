@@ -1,10 +1,9 @@
 import React from "react";
-import '../../Css/Componentpage/HistoryoftheComponents.css' ; 
 
 function HistoryoftheComponents() {
   return (
-    <div className="body2">
-        <h1>HistoryoftheComponents</h1>
+    <div>
+        <h1 style={{color: '#D3E2EA', textAlign: 'center'}}>HistoryoftheComponents</h1>
     </div>
   );
 }

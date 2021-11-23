@@ -4,7 +4,11 @@ import Grid from "@material-ui/core/Grid";
 import '../../Css/Componentpage/Componentpage.css' ; 
 import { makeStyles } from "@material-ui/styles";
 import Componentgraph from "./ComponentGraph";
+import TotalActions from  "./TotalActions";
 import ComponentList from "./ListComponents"
+import HistoryoftheComponents from "./HistoryoftheComponents";
+import FutureoftheComponents from "./FutureoftheComponents";
+import ListComponents from "./ListComponents";
 const useStyles = makeStyles({
   box: {
     height: "100%",
@@ -54,10 +58,14 @@ function ComponentPage() {
             </Box>
           </Grid>
           <Grid xs={6} className={classes.item} item>
-            <Box className={classes.box} bgcolor="#24242C"  />
+            <Box className={classes.box} bgcolor="#24242C"  >
+            <HistoryoftheComponents /> 
+            </Box>
             </Grid>
             <Grid xs={6} className={classes.item} item>
-            <Box className={classes.box} bgcolor="#24242C"  />
+            <Box className={classes.box} bgcolor="#24242C"  >
+            <FutureoftheComponents /> 
+            </Box>
             </Grid>
         </Grid>
       </Grid>
@@ -69,10 +77,13 @@ function ComponentPage() {
           container
         >
           <Grid style={{height:"200px"}} className={classes.item2} item>
-            <Box className={classes.totalactionsbox} bgcolor="#24242C"  />
+            <Box className={classes.totalactionsbox} bgcolor="#24242C">
+            <TotalActions/>
+            </Box>
           </Grid>
           <Grid style={{height:"600px"}} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C" >
+              
             </Box>
           </Grid>
         </Grid>
