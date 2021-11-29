@@ -9,6 +9,9 @@ import ComponentList from "./ListComponents"
 import HistoryoftheComponents from "./HistoryoftheComponents";
 import FutureoftheComponents from "./FutureoftheComponents";
 import ListComponents from "./ListComponents";
+import {useDispatch ,useSelector } from "react-redux";
+import {setComponents, selectedComponent} from "../../Redux/Actions/ComponentActions";
+
 const useStyles = makeStyles({
   box: {
     height: "100%",
@@ -43,6 +46,13 @@ const useStyles = makeStyles({
 
 function ComponentPage() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const gotcomponents = useSelector((state) => state.allcomponents.components);
+  console.log(components)
+  dispatch(setComponents(components));
+  const component = useSelector((state) => state.allcomponents.components.find(component => component.Name == "real"))
+  console.log(component)
+
   return (
     <div style={{ width: '90%', margin: "auto" }}>
     <Grid spacing={4} className={classes.container} container>
@@ -54,18 +64,18 @@ function ComponentPage() {
         >
           <Grid xs={12} className={classes.item2} item2>
             <Box className={classes.box} bgcolor="#24242C" >
-              <Componentgraph/>
+              <Componentgraph data ={component}/>
             </Box>
           </Grid>
           <Grid xs={6} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C"  >
-            <HistoryoftheComponents /> 
-            </Box>
+              <HistoryoftheComponents data ={component.HistoryActions}/>
+              </Box>
             </Grid>
             <Grid xs={6} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C"  >
-            <FutureoftheComponents /> 
-            </Box>
+              <FutureoftheComponents data ={component.PlannedActions}/>
+              </Box>
             </Grid>
         </Grid>
       </Grid>
@@ -83,7 +93,7 @@ function ComponentPage() {
           </Grid>
           <Grid style={{height:"600px"}} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C" >
-              
+             <ListComponents data ={components}/>
             </Box>
           </Grid>
         </Grid>
@@ -93,9 +103,10 @@ function ComponentPage() {
   );
 }
 
+
 const components = [
   {
-    Name:"Test",
+    Name:"real",
     TotalActions:5000,
     Actions:[
       {

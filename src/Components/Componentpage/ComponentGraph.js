@@ -10,14 +10,14 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-function Componentgraph(machine) {
-  const {data} = machine;
+function Componentgraph(component) {
+  const {data} = component;
   return (
     <ResponsiveContainer width= "95%" height= "100%">
     <BarChart
     width={1000}
     height={400}
-    data = {data}
+    data= {data.Actions}
     barCategoryGap="5%"
     barSize = "30px"
     margin={{
@@ -26,11 +26,11 @@ function Componentgraph(machine) {
     }}
   >
     <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="startTime" />
-    <YAxis type="number" domain={[0, 50000]} />
+    <XAxis dataKey="week" />
+    <YAxis type="number" domain={[0, 500]} />
     <Tooltip />
     <Legend />
-    <Bar dataKey="Actions" stackId="a" fill="#2088CE" />
+    <Bar dataKey="actions" stackId="a" fill="#2088CE" />
   </BarChart>
   </ResponsiveContainer>
   );

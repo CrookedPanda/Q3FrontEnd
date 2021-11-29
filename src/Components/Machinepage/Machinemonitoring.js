@@ -13,7 +13,6 @@ import {Link} from "react-router-dom";
 //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import { CardHeader,Card,CardContent} from '@mui/material';
 
-
 const settings = {
   infinite: false,
   slidesToShow: 4,
