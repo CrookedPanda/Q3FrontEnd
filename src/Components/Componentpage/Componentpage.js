@@ -32,6 +32,9 @@ const useStyles = makeStyles({
   container: {
     height: "800px"
   },
+  container2: {
+    height: "950px"
+  },
   innerContainer: {
     height: "50%"
   },
@@ -40,7 +43,7 @@ const useStyles = makeStyles({
     flex: 1 
   },
   item2: {
-    height: "50%",
+    height: "70%",
   },
 });
 
@@ -50,8 +53,9 @@ function ComponentPage() {
   const gotcomponents = useSelector((state) => state.allcomponents.components);
   console.log(components)
   dispatch(setComponents(components));
-  const component = useSelector((state) => state.allcomponents.components.find(component => component.Name == "real"))
-  console.log(component)
+  const component = useSelector((state) => state.allcomponents.components[0])
+  dispatch(selectedComponent(component));
+  const getcomponent = useSelector((state) => state.component)
 
   return (
     <div style={{ width: '90%', margin: "auto" }}>
@@ -64,17 +68,18 @@ function ComponentPage() {
         >
           <Grid xs={12} className={classes.item2} item2>
             <Box className={classes.box} bgcolor="#24242C" >
-              <Componentgraph data ={component}/>
+            <h1 style ={{ color : "#D3E2EA",textAlign:"center"}}>{getcomponent.Name}</h1>
+              <Componentgraph data ={getcomponent}/>
             </Box>
           </Grid>
           <Grid xs={6} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C"  >
-              <HistoryoftheComponents data ={component.HistoryActions}/>
+              <HistoryoftheComponents data ={getcomponent.HistoryActions}/>
               </Box>
             </Grid>
             <Grid xs={6} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C"  >
-              <FutureoftheComponents data ={component.PlannedActions}/>
+              <FutureoftheComponents data ={getcomponent.PlannedActions}/>
               </Box>
             </Grid>
         </Grid>
@@ -83,7 +88,7 @@ function ComponentPage() {
         <Grid
           spacing={4}
           direction="column"
-          className={classes.container}
+          className={classes.container2}
           container
         >
           <Grid style={{height:"200px"}} className={classes.item2} item>
@@ -91,7 +96,7 @@ function ComponentPage() {
               <TotalActions/>
             </Box>
           </Grid>
-          <Grid style={{height:"600px"}} className={classes.item} item>
+          <Grid style={{height:"950px"}} className={classes.item} item>
             <Box className={classes.box} bgcolor="#24242C" >
              <ListComponents data ={components}/>
             </Box>
@@ -400,7 +405,7 @@ const components = [
     ]
   },
   {
-    Name:"Test",
+    Name:"Chicken",
     TotalActions:5000,
     Actions:[
       {

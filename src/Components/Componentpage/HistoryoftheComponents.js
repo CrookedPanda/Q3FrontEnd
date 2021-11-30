@@ -12,29 +12,23 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   color: '#D3E2EA',
   backgroundColor: '#24242C',
-  fontcolor: "#D3E2EA"
+  fontcolor: "#D3E2EA",
+  overflowX: 'auto',
+  maxHeight:100
 }));
 
 function HistoryoftheComponents(HistoryActions) {
   const {data} = HistoryActions;
   return (
-    <TableContainer Component={Item}>
-        <Table sx={{ maxWidth: 600 }} aria-label="simple table">
+    <TableContainer sx={{ maxWidth: "100%" ,maxHeight:"100%" }}  Component={Item}>
+        <Table sx={{ maxWidth: "100%" ,maxHeight:"100%" }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell style={{color: '#D3E2EA'}}>Type of Action</TableCell>
-              <TableCell style={{color: '#D3E2EA'}}>Date of Action</TableCell>
+              <TableCell style ={{ color : "#D3E2EA", backgroundColor : "#212126"}}>Type of Action</TableCell>
+              <TableCell style ={{ color : "#D3E2EA", backgroundColor : "#212126"}}>Date of Action</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((HistoryAction) => (
-              <TableRow
-                key={HistoryAction}
-              > 
-                <TableCell style={{color: '#D3E2EA', }} align="middle">{HistoryAction.Type}</TableCell>
-                <TableCell style={{color: '#D3E2EA', }} align="middle">{HistoryAction.Date}</TableCell>
-              </TableRow>   
-            ))}
           </TableBody>
         </Table>
       </TableContainer>

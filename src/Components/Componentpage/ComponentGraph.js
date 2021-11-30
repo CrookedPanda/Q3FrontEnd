@@ -4,7 +4,6 @@ import {
   Bar,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
   ResponsiveContainer,
@@ -21,12 +20,11 @@ function Componentgraph(component) {
     barCategoryGap="5%"
     barSize = "30px"
     margin={{
-      top: 10,
-      bottom: 5
+      bottom: 70
     }}
   >
-    <XAxis dataKey="week" />
-    <YAxis type="number" domain={[0, 500]} />
+    <XAxis dataKey="week"/>
+    <YAxis type="count" domain={[0, 500]} />
     <Tooltip />
     <Legend />
     <Bar dataKey="actions" stackId="a" fill="#2088CE" />
