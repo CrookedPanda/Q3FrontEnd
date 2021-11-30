@@ -45,12 +45,12 @@ const settings = {
     //}
 
     return (
-    <div style={{color: '#D3E2EA',height: '800px',}}>
+    <div style={{color: '#D3E2EA',height: '900px',}}>
       <Box  sx={{
-        height: '800px',
-          
+        height: '800px',    
         backgroundColor: '#2B2B34',
         marginLeft: '10%',
+        marginTop: '2%',
         marginRight: '10%',
       }}>
           <Slider {...settings}>

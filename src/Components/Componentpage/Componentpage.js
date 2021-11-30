@@ -21,6 +21,10 @@ const useStyles = makeStyles({
     height: "200%",
     width: "100%"
   },
+  box3: {
+    height: "100%",
+    width: "80%"
+  },
   totalactionsbox: {
     height: "100%",
     width: "100%"
@@ -92,12 +96,12 @@ function ComponentPage() {
           container
         >
           <Grid style={{height:"200px"}} className={classes.item2} item>
-            <Box className={classes.totalactionsbox} bgcolor="#24242C"  >
-              <TotalActions/>
+            <Box className={classes.box3} bgcolor="#24242C"  >
+              <TotalActions data ={getcomponent.TotalActions}/>
             </Box>
           </Grid>
-          <Grid style={{height:"950px"}} className={classes.item} item>
-            <Box className={classes.box} bgcolor="#24242C" >
+          <Grid style={{height:"720px"}} className={classes.item} item>
+            <Box className={classes.box3} bgcolor="#24242C" >
              <ListComponents data ={components}/>
             </Box>
           </Grid>
@@ -111,45 +115,95 @@ function ComponentPage() {
 
 const components = [
   {
-    Name:"real",
-    TotalActions:5000,
+    Name:"31005",
+    TotalActions:"8377 Actions",
     Actions:[
       {
         week:"week1",
-        actions:100
+        actions:1953
       },
       {
         week:"week2",
-        actions:150
+        actions:6176
+      },
+    ],
+    HistoryActions:[
+      {
+        Type:"maintance",
+        Date:"29-02-2020 09:31"
+      },
+      {
+        Type:"repair",
+        Date:"29-02-2020 09:31"
+      },
+      {
+        Type:"maintance",
+        Date:"29-02-2020 09:31"
+      },
+      {
+        Type:"repair",
+        Date:"29-02-2020 09:31"
+      },
+      {
+        Type:"maintance",
+        Date:"29-02-2020 09:31"
+      },
+      {
+        Type:"maintance",
+        Date:"29-02-2020 09:31"
+      },
+      {
+        Type:"repair",
+        Date:"29-02-2020 09:31"
+      }
+    ],
+    PlannedActions:[
+      {
+      Type:"maintance",
+      Date:"29-02-2022 10:31"
+      },
+      {
+        Type:"repair",
+        Date:"29-02-2022 10:31"
+      },
+      {
+        Type:"maintance",
+        Date:"29-02-2022 10:31"
+      },
+      {
+        Type:"maintance",
+        Date:"29-02-2022 10:31"
+      },
+      {
+        Type:"maintance",
+        Date:"29-02-2022 10:31"
+      },
+      {
+        Type:"repair",
+        Date:"29-02-2022 10:31"
+      },
+    ]
+  },
+  {
+    Name:"41301",
+    TotalActions:120717,
+    Actions:[
+      {
+        week:"week1",
+        actions:43625
+      },
+      {
+        week:"week2",
+        actions:8767
       },
       {
         week:"week3",
-        actions:250
+        actions:29616
       },
       {
         week:"week4",
-        actions:50
+        actions:33422
       },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
     ],
     HistoryActions:[
       {
@@ -209,45 +263,25 @@ const components = [
     ]
   },
   {
-    Name:"Test",
-    TotalActions:5000,
+    Name:"41202",
+    TotalActions:128523,
     Actions:[
       {
         week:"week1",
-        actions:100
+        actions:31080
       },
       {
         week:"week2",
-        actions:150
+        actions:30796
       },
       {
         week:"week3",
-        actions:250
+        actions:25290
       },
       {
         week:"week4",
-        actions:50
+        actions:34210
       },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
     ],
     HistoryActions:[
       {
@@ -307,16 +341,16 @@ const components = [
     ]
   },
   {
-    Name:"Test",
-    TotalActions:5000,
+    Name:"30005",
+    TotalActions:36923,
     Actions:[
       {
         week:"week1",
-        actions:100
+        actions:19950
       },
       {
         week:"week2",
-        actions:150
+        actions:0
       },
       {
         week:"week3",
@@ -324,28 +358,84 @@ const components = [
       },
       {
         week:"week4",
-        actions:50
+        actions:14328
+      },
+    ],
+    HistoryActions:[
+      {
+        Type:"maintance",
+        Date:"29-02-2020 09:31"
       },
       {
-        week:"week5",
-        actions:170
+        Type:"repair",
+        Date:"29-02-2020 09:31"
       },
       {
-        week:"week6",
-        actions:220
+        Type:"maintance",
+        Date:"29-02-2020 09:31"
       },
       {
-        week:"week7",
-        actions:400
+        Type:"repair",
+        Date:"29-02-2020 09:31"
+      },
+    ],
+    PlannedActions:[
+      {
+      Type:"maintance",
+      Date:"29-02-20211 10:31"
       },
       {
-        week:"week8",
-        actions:300
+        Type:"repair",
+        Date:"29-02-20211 10:31"
+      },
+    ]
+  },
+  {
+    Name:"90200",
+    TotalActions:73386,
+    Actions:[
+      {
+        week:"week1",
+        actions:39827
       },
       {
-        week:"week9",
-        actions:100
-      }
+        week:"week2",
+        actions:24525
+      },
+      {
+        week:"week3",
+        actions:0
+      },
+      {
+        week:"week4",
+        actions:0
+      },
+    ],
+    HistoryActions:[
+      {
+        Type:"maintance",
+        Date:"29-02-2020 09:31"
+      },
+      {
+        Type:"repair",
+        Date:"29-02-2020 09:31"
+      },
+    ],
+    PlannedActions:[
+      {
+      Type:"maintance",
+      Date:"29-02-20211 10:31"
+      },
+      {
+        Type:"repair",
+        Date:"29-02-20211 10:31"
+      },
+    ]
+  },
+  {
+    Name:"41004",
+    TotalActions:24657,
+    Actions:[
     ],
     HistoryActions:[
       {
@@ -405,591 +495,256 @@ const components = [
     ]
   },
   {
-    Name:"Chicken",
-    TotalActions:5000,
+    Name:"44300",
+    TotalActions:8831,
     Actions:[
-      {
-        week:"week1",
-        actions:100
-      },
-      {
-        week:"week2",
-        actions:150
-      },
-      {
-        week:"week3",
-        actions:250
-      },
-      {
-        week:"week4",
-        actions:50
-      },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
+
     ],
     HistoryActions:[
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      }
     ],
     PlannedActions:[
-      {
-      Type:"maintance",
-      Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
     ]
   },
   {
-    Name:"Test",
-    TotalActions:5000,
+    Name:"44320",
+    TotalActions:61508,
     Actions:[
-      {
-        week:"week1",
-        actions:100
-      },
-      {
-        week:"week2",
-        actions:150
-      },
-      {
-        week:"week3",
-        actions:250
-      },
-      {
-        week:"week4",
-        actions:50
-      },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
+
     ],
     HistoryActions:[
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      }
     ],
     PlannedActions:[
-      {
-      Type:"maintance",
-      Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
     ]
   },
   {
-    Name:"Test",
+    Name:"44310",
     TotalActions:5000,
     Actions:[
-      {
-        week:"week1",
-        actions:100
-      },
-      {
-        week:"week2",
-        actions:150
-      },
-      {
-        week:"week3",
-        actions:250
-      },
-      {
-        week:"week4",
-        actions:50
-      },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
+
     ],
     HistoryActions:[
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      }
     ],
     PlannedActions:[
-      {
-      Type:"maintance",
-      Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
     ]
   },
   {
-    Name:"Test",
+    Name:"40004",
     TotalActions:5000,
     Actions:[
-      {
-        week:"week1",
-        actions:100
-      },
-      {
-        week:"week2",
-        actions:150
-      },
-      {
-        week:"week3",
-        actions:250
-      },
-      {
-        week:"week4",
-        actions:50
-      },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
+
     ],
     HistoryActions:[
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      }
     ],
     PlannedActions:[
-      {
-      Type:"maintance",
-      Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
     ]
   },
   {
-    Name:"Test",
+    Name:"31040",
     TotalActions:5000,
     Actions:[
-      {
-        week:"week1",
-        actions:100
-      },
-      {
-        week:"week2",
-        actions:150
-      },
-      {
-        week:"week3",
-        actions:250
-      },
-      {
-        week:"week4",
-        actions:50
-      },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
+
     ],
     HistoryActions:[
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      }
     ],
     PlannedActions:[
-      {
-      Type:"maintance",
-      Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
     ]
   },
   {
-    Name:"Test",
+    Name:"43002",
     TotalActions:5000,
     Actions:[
-      {
-        week:"week1",
-        actions:100
-      },
-      {
-        week:"week2",
-        actions:150
-      },
-      {
-        week:"week3",
-        actions:250
-      },
-      {
-        week:"week4",
-        actions:50
-      },
-      {
-        week:"week5",
-        actions:170
-      },
-      {
-        week:"week6",
-        actions:220
-      },
-      {
-        week:"week7",
-        actions:400
-      },
-      {
-        week:"week8",
-        actions:300
-      },
-      {
-        week:"week9",
-        actions:100
-      }
+
     ],
     HistoryActions:[
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-2020 09:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-2020 09:31"
-      }
     ],
     PlannedActions:[
-      {
-      Type:"maintance",
-      Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"maintance",
-        Date:"29-02-20211 10:31"
-      },
-      {
-        Type:"repair",
-        Date:"29-02-20211 10:31"
-      },
+    ]
+  },
+  {
+    Name:"33055",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"11032",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"41201",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"29020",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"41001",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"41003",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"40046",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"20050",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"23050",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"40002",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"90220",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"29130",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"29030",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"44202",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"29010",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"44200",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
+    ]
+  },
+  {
+    Name:"32030",
+    TotalActions:5000,
+    Actions:[
+
+    ],
+    HistoryActions:[
+    ],
+    PlannedActions:[
     ]
   },
 ]

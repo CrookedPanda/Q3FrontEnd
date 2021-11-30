@@ -15,7 +15,7 @@ function Machinegraph(machine) {
     <div>
     <h5>{data.name}</h5>
     <BarChart
-    width={1200}
+    width={1500}
     height={750}
     data={data.uptime}
     barCategoryGap="0%"

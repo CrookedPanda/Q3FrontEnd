@@ -27,10 +27,19 @@ function FutureoftheComponents(PlannedActions) {
       <TableHead >
         <TableRow>
           <TableCell style ={{ color : "#D3E2EA", backgroundColor : "#212126"}}>Type of Action</TableCell>
-          <TableCell style ={{ color : "#D3E2EA", backgroundColor : "#212126"}}>Date of Action</TableCell>
+          <TableCell style ={{ color : "#D3E2EA", backgroundColor : "#212126"}}>Planned On</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
+        {data.map((HistoryAction,index) => (
+          <TableRow
+            key={HistoryAction}
+            style ={ index % 2? { background : "#212126" }:{ background : "#24242C" }}
+          > 
+            <TableCell style={{color: '#D3E2EA', }} align="middle">{HistoryAction.Type}</TableCell>
+            <TableCell style={{color: '#D3E2EA', }} align="middle">{HistoryAction.Date}</TableCell>
+          </TableRow>   
+        ))}
       </TableBody>
     </Table>
   </TableContainer>

@@ -24,7 +24,7 @@ function Componentgraph(component) {
     }}
   >
     <XAxis dataKey="week"/>
-    <YAxis type="count" domain={[0, 500]} />
+    <YAxis type="number" domain={[0, 10000]} />
     <Tooltip />
     <Legend />
     <Bar dataKey="actions" stackId="a" fill="#2088CE" />

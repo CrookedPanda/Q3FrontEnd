@@ -12,7 +12,7 @@ function Machinegraph(machine) {
   const {data} = machine;
   return (
     <BarChart
-    width={300}
+    width={400}
     height={160}
     data = {data}
     barCategoryGap="-1%"
