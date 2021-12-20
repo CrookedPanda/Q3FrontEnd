@@ -87,8 +87,8 @@ function ComponentPage() {
           container
         >
           <Grid style={{height:"200px"}} className={classes.item2} item>
-            <Box className={classes.totalactionsbox} bgcolor="#24242C">
-            <TotalActions/>
+            <Box className={classes.totalactionsbox} bgcolor="#24242C"  >
+              <TotalActions/>
             </Box>
           </Grid>
           <Grid style={{height:"600px"}} className={classes.item} item>

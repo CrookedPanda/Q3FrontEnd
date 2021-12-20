@@ -19,7 +19,7 @@ function HistoryoftheComponents(HistoryActions) {
   const {data} = HistoryActions;
   return (
     <TableContainer Component={Item}>
-        <Table sx={{ maxWidth: 600 }} aria-label="simple table">
+        <Table sx={{ maxWidth: 900 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell style={{color: '#D3E2EA'}}>Type of Action</TableCell>
