@@ -23,7 +23,7 @@ function LifepageComponents(lifepageComponents) {
         <Table sx={{ minWidth: 900 }} style={{display: "flex", flexDirection: "column"}} aria-label="simple table">
           <TableHead>
             <TableRow style={{display: "flex"}}>
-              <TableCell style={{color: '#D3E2EA', fontSize: '35px', height: '100px', flex: 1}}>Components</TableCell>
+              <TableCell style={{color: '#D3E2EA', fontSize: '35px', flex: 1}}>Components</TableCell>
               <TableCell style={{color: '#D3E2EA', fontSize: '35px', flex: 1}}>Actions</TableCell>
               <TableCell style={{color: '#D3E2EA', flex: 1}}></TableCell>
             </TableRow>
@@ -34,9 +34,9 @@ function LifepageComponents(lifepageComponents) {
             let remaining = lifepageComponents.maxActions - lifepageComponents.totalActions;
             return (
               <TableRow key={lifepageComponents} style={{display: "flex"}}> 
-                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px', flex: 1}} align="middle">{lifepageComponents.description}</TableCell>
-                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px', flex: 1}} align="middle">{'Action: '+lifepageComponents.totalActions+'/'+lifepageComponents.maxActions}</TableCell>
-                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px', display: "flex", flex: 1}} align="middle">
+                <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}}>{lifepageComponents.description}</TableCell>
+                <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}} align="middle">{'Action: '+lifepageComponents.totalActions+'/'+lifepageComponents.maxActions}</TableCell>
+                <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}} align="middle">
                   <div style={{flex: used, backgroundColor: "#D23333"}}></div>
                   <div style={{flex: remaining, backgroundColor: "#227A1E"}}></div>
                 </TableCell>
