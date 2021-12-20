@@ -20,22 +20,29 @@ function LifepageComponents(lifepageComponents) {
   const {data} = lifepageComponents;
   return (
     <TableContainer Component={Item}>
-        <Table sx={{ minWidth: 900 }} aria-label="simple table">
+        <Table sx={{ minWidth: 900 }} style={{display: "flex", flexDirection: "column"}} aria-label="simple table">
           <TableHead>
-            <TableRow>
-              <TableCell style={{color: '#D3E2EA', fontSize: '35px', height: '100px'}}>Components</TableCell>
-              <TableCell style={{color: '#D3E2EA', fontSize: '35px'}}>Actions</TableCell>
-              <TableCell style={{color: '#D3E2EA'}}></TableCell>
+            <TableRow style={{display: "flex"}}>
+              <TableCell style={{color: '#D3E2EA', fontSize: '35px', height: '100px', flex: 1}}>Components</TableCell>
+              <TableCell style={{color: '#D3E2EA', fontSize: '35px', flex: 1}}>Actions</TableCell>
+              <TableCell style={{color: '#D3E2EA', flex: 1}}></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-          {data.map((lifepageComponents) =>(
-              <TableRow key={lifepageComponents}> 
-                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px'}} align="middle">{lifepageComponents.description}</TableCell>
-                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px'}} align="middle">{'Action: '+lifepageComponents.totalActions+'/'+lifepageComponents.maxActions}</TableCell>
-                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px'}} align="middle">{"tekening"}</TableCell>
+          {data.map((lifepageComponents) => {
+            let used = lifepageComponents.totalActions;
+            let remaining = lifepageComponents.maxActions - lifepageComponents.totalActions;
+            return (
+              <TableRow key={lifepageComponents} style={{display: "flex"}}> 
+                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px', flex: 1}} align="middle">{lifepageComponents.description}</TableCell>
+                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px', flex: 1}} align="middle">{'Action: '+lifepageComponents.totalActions+'/'+lifepageComponents.maxActions}</TableCell>
+                <TableCell style={{color: '#D3E2EA', fontSize: '25px', height: '100px', display: "flex", flex: 1}} align="middle">
+                  <div style={{flex: used, backgroundColor: "#D23333"}}></div>
+                  <div style={{flex: remaining, backgroundColor: "#227A1E"}}></div>
+                </TableCell>
               </TableRow>   
-            ))}
+            );
+          })}
           </TableBody>
           <TableRow style={{color: '#D3E2EA', fontSize: '25px', height: '75px'}} text-align="center">{"Zoekbalk"}</TableRow>
         </Table>
