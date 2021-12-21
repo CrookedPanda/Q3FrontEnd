@@ -28,44 +28,10 @@ const settings = {
     const machines = useSelector((state) => state.allMachines.machines);
 
     const getmachines = async () => {
-      //const response = await axios.get('https://localhost:44374/api/Poorten/machine/').catch((er) => {
-      //  console.log("Err,err")
-      //});
-      //dispatch(setMachines(response.data));
-
-      var dataset = [
-        {
-            name: "Hi",
-            data: [
-                {
-                    startTime: "2021-12-13T12:00:00Z",
-                    endTime: "2021-12-14T00:00:00Z",
-                    type: "off"
-                },
-                {
-                    startTime: "2021-12-14T00:00:00Z",
-                    endTime: "2021-12-14T11:00:00Z",
-                    type: "on"
-                },
-                {
-                    startTime: "2021-12-14T11:00:00Z",
-                    endTime: "2021-12-14T12:00:00Z",
-                    type: "off"
-                },
-                {
-                    startTime: "2021-12-14T12:00:00Z",
-                    endTime: "2021-12-14T13:00:00Z",
-                    type: "on"
-                }
-            ]
-        }
-      ];
-
-      for (let i = 0; i < 31; i++) {
-          dataset.push(dataset[0]);
-      }
-
-      dispatch(setMachines(dataset));
+      const response = await axios.get('https://localhost:44374/api/Poorten/machine/').catch((er) => {
+       console.log("Err,err")
+      });
+      dispatch(setMachines(response.data));
     }
 
     useEffect(()=> {
