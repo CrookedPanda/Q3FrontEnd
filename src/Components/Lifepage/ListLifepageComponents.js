@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,6 +8,9 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import { height, minHeight } from "@mui/system";
+import axios from "axios";
+import {useDispatch ,useSelector } from "react-redux";
+import {allcomponents, setComponents} from "../../Redux/Actions/LifepageActions";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -16,7 +19,20 @@ const Item = styled(Paper)(({ theme }) => ({
   fontcolor: "#D3E2EA"
 }));
 
+
+
 function LifepageComponents(lifepageComponents) {
+  const [comps, setComps] = React.useState(null);
+
+  React.useEffect(() => {
+    axios.get("https://localhost:44374/api/lifespan").then((response) => {
+      setComps(response.data);
+    });
+  }, []);
+
+  if (!comps) return null;
+    
+  console.log("Comps", comps)
   const {data} = lifepageComponents;
   return (
     <div style={{display: "flex", height: "90vh", flexDirection: "column"}}>
@@ -30,13 +46,13 @@ function LifepageComponents(lifepageComponents) {
               </TableRow>
             </TableHead>
             <TableBody>
-            {data.map((lifepageComponents) => {
-              let used = lifepageComponents.totalActions;
-              let remaining = lifepageComponents.maxActions - lifepageComponents.totalActions;
+            {comps.map(comp => {
+              let used = comp.totalActions;
+              let remaining = comp.maxActions - comp.totalActions;
               return (
-                <TableRow key={lifepageComponents} style={{display: "flex"}}> 
-                  <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}}>{lifepageComponents.description}</TableCell>
-                  <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}} align="middle">{'Action: '+lifepageComponents.totalActions+'/'+lifepageComponents.maxActions}</TableCell>
+                <TableRow key={comp} style={{display: "flex"}}> 
+                  <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}}>{comp.description}</TableCell>
+                  <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}} align="middle">{'Action: '+comp.totalActions+'/'+comp.maxActions}</TableCell>
                   <TableCell style={{color: '#D3E2EA', fontSize: '25px', display: "flex", flex: 1}} align="middle">
                     <div style={{flex: used, backgroundColor: "#D23333"}}></div>
                     <div style={{flex: remaining, backgroundColor: "#227A1E"}}></div>
