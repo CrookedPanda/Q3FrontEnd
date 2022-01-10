@@ -17,7 +17,7 @@ const settings = {
   infinite: false,
   slidesToShow: 4,
   speed: 10,
-  rows: 4,
+  rows: 7,
   slidesToshow: 1,
   marginRight: '100px'
 };
