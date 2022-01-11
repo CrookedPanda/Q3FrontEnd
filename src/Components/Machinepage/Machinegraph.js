@@ -1,6 +1,7 @@
 import { TimeRange, TimeRangeEvent, TimeSeries } from "pondjs";
 import React, { Component } from "react";
 import { Charts, ChartContainer, ChartRow, EventChart, Resizable } from "react-timeseries-charts";
+import { timeFormat } from "d3-time-format";
 
 export default class MachineGraph extends Component {
     render() {
@@ -16,7 +17,7 @@ export default class MachineGraph extends Component {
 
         return (
             <Resizable style={{width: '90%'}}>
-                <ChartContainer timeRange={timeRange}>
+                <ChartContainer format={DATE_FORMAT} timeRange={timeRange}>
                     <ChartRow height="35">
                         <Charts>
                             <EventChart
@@ -52,3 +53,5 @@ export default class MachineGraph extends Component {
         return new Date(this.props.items[this.props.items.length - 1].endTime);
     }
 }
+
+const DATE_FORMAT = timeFormat("%H:%M");
