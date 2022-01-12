@@ -1,36 +1,57 @@
-import React from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from 'recharts';
-function Machinegraph(machine) {
-  const {data} = machine;
-  return (
-    <BarChart
-    width={300}
-    height={160}
-    data = {data}
-    barCategoryGap="-1%"
-    barSize = "30px"
-    margin={{
-      top: 10,
-      bottom: 5
-    }}
-  >
-    <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="startTime" />
-    <YAxis type="number" domain={[0, 30]} />
-    <Tooltip />
-    <Legend />
-    <Bar dataKey="uptime" stackId="a" fill="#369E32" />
-    <Bar dataKey="downtime" stackId="a" fill="#D23333" />
-  </BarChart>
-  );
+import { TimeRange, TimeRangeEvent, TimeSeries } from "pondjs";
+import React, { Component } from "react";
+import { Charts, ChartContainer, ChartRow, EventChart, Resizable } from "react-timeseries-charts";
+import { timeFormat } from "d3-time-format";
+
+export default class MachineGraph extends Component {
+    render() {
+        let endTime = this.getEndDate();
+        let startTime = new Date(endTime);
+        startTime.setDate(endTime.getDate() - 1);
+        let timeRange = new TimeRange(startTime, endTime);
+
+        let events = this.props.items.map(
+            ({ startTime, endTime, ...data }) => new TimeRangeEvent(new TimeRange(new Date(startTime), new Date(endTime)), data)
+        );
+        let series = new TimeSeries({ events });
+
+        return (
+            <Resizable style={{width: '90%'}}>
+                <ChartContainer format={DATE_FORMAT} timeRange={timeRange}>
+                    <ChartRow height="35">
+                        <Charts>
+                            <EventChart
+                                series={series}
+                                style={(event, state) => this.getStyle(event, state)} />
+                        </Charts>
+                    </ChartRow>
+                </ChartContainer>
+            </Resizable>
+        );
+    }
+
+    getStyle(event, _state) {
+        switch (event.get("type")) {
+            case "on": {
+                return {
+                    fill: "#227A1E"
+                }
+            }
+            case "off":
+            default: {
+                return {
+                    fill: "#817D70"
+                }
+            }
+        }
+    }
+    
+    getEndDate() {
+        if (this.props.items.length === 0) {
+            return new Date();
+        }
+        return new Date(this.props.items[this.props.items.length - 1].endTime);
+    }
 }
 
-export default Machinegraph;
+const DATE_FORMAT = timeFormat("%H:%M");
