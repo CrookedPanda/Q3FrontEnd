@@ -18,7 +18,7 @@ export default class MachineGraph extends Component {
         return (
             <Resizable style={{width: '90%'}}>
                 <ChartContainer format={DATE_FORMAT} timeRange={timeRange}>
-                    <ChartRow height="35">
+                    <ChartRow height={GRAPH_HEIGHT}>
                         <Charts>
                             <EventChart
                                 series={series}
@@ -31,17 +31,20 @@ export default class MachineGraph extends Component {
     }
 
     getStyle(event, _state) {
-        switch (event.get("type")) {
+        return {
+            fill: this.getBarColour(event.get("type")),
+            height: GRAPH_HEIGHT
+        };
+    }
+
+    getBarColour(type) {
+        switch (type) {
             case "on": {
-                return {
-                    fill: "#227A1E"
-                }
+                return "#227A1E";
             }
             case "off":
             default: {
-                return {
-                    fill: "#817D70"
-                }
+                return "#817D70";
             }
         }
     }
@@ -55,3 +58,4 @@ export default class MachineGraph extends Component {
 }
 
 const DATE_FORMAT = timeFormat("%H:%M");
+const GRAPH_HEIGHT = 55;

@@ -15,9 +15,9 @@ import {Link} from "react-router-dom";
 
 const settings = {
   infinite: false,
-  slidesToShow: 4,
+  slidesToShow: 5,
   speed: 10,
-  rows: 7,
+  rows: 6,
   slidesToshow: 1,
   marginRight: '100px'
 };
